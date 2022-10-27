@@ -6,7 +6,7 @@
 html {
   width: 1440px;
   margin: 0 auto;
-  background-color: #e5e5e5;
+  background-color: #fcfdf4d3;
 }
 @font-face {
   font-family: Poppins;
@@ -53,19 +53,21 @@ h2 + p {
   font-size: 16px;
   color: #5b5f62;
   margin-bottom: 28px;
+  position: static;
 }
-main button {
+.location-buttons button {
   padding: 10px 20px;
   font-family: Poppins;
   font-weight: 400;
   font-size: 14px;
   border-radius: 30px;
+  background-color: #fcfdf4d3;
 }
-main button:first-of-type {
+.location-buttons button:first-of-type {
   color: #ffffff;
   background-color: #2d3134;
 }
-main button:hover {
+.location-buttons button:hover {
   cursor: pointer;
 }
 .main-logo {
@@ -92,16 +94,16 @@ main button:hover {
   font-family: Poppins;
   font-weight: 500;
   font-size: 16px;
+  background-color: #fcfdf4d3;
 }
 .book-now img {
   width: 16px;
   height: 15px;
 }
 .book-now:hover {
-  color: white;
-  background-color: #000;
-  border-color: #000;
+  cursor: pointer;
 }
+
 .location-buttons {
   display: flex;
   gap: 14px;
@@ -109,23 +111,70 @@ main button:hover {
   margin-bottom: 51px;
 }
 /* Grid tests */
+
+.gallery-container button,
+h3,
+p {
+  position: absolute;
+}
+.gallery-container button {
+  left: 24px;
+  top: 24px;
+  border-radius: 12px;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: #2d3134;
+  color: #ffffff;
+}
+.gallery-container h3 {
+  left: 24px;
+  bottom: 48px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+}
+.gallery-container p {
+  left: 24px;
+  bottom: 24px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+}
+.grid-img1 button {
+  color: #2d3134;
+  background-color: #ffffff;
+}
+.grid-img4 button {
+  color: #2d3134;
+  background-color: #ffffff;
+}
 .grid-img1 {
   grid-area: cottege;
+  position: relative;
 }
 .grid-img2 {
   grid-area: italy;
+  position: relative;
 }
 .grid-img3 {
   grid-area: bridge;
+  position: relative;
 }
 .grid-img4 {
   grid-area: group;
+  position: relative;
 }
 .grid-img5 {
   grid-area: twin;
+  position: relative;
 }
 .grid-img6 {
   grid-row: bigben;
+  position: relative;
 }
 .gallery-container {
   display: grid;
@@ -133,8 +182,8 @@ main button:hover {
     "cottege italy italy bridge bridge"
     "group italy italy twin bigben";
   justify-content: center;
-  align-items: stretch;
-  row-gap: 26px;
+  align-items: end;
+  row-gap: 10px;
   column-gap: 30px;
   margin-bottom: 84px;
 }

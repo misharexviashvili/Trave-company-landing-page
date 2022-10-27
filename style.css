@@ -6,7 +6,7 @@
 html {
   width: 1440px;
   margin: 0 auto;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 @font-face {
   font-family: Poppins;
@@ -14,7 +14,7 @@ html {
 }
 @font-face {
   font-family: Inter;
-  src: url(Inter-VariableFont_slnt\wght.ttf);
+  src: url(Inter.ttf);
 }
 @font-face {
   font-family: Sen;
@@ -37,6 +37,36 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+h2 {
+  font-family: Inter;
+  color: #2d3134;
+  font-weight: 600;
+  font-size: 56px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+h2 + p {
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  color: #5b5f62;
+  margin-bottom: 28px;
+}
+main button {
+  padding: 10px 20px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 30px;
+}
+main button:first-of-type {
+  color: #ffffff;
+  background-color: #2d3134;
+}
+main button:hover {
+  cursor: pointer;
 }
 .main-logo {
   display: flex;
@@ -63,7 +93,48 @@ nav {
   font-weight: 500;
   font-size: 16px;
 }
-.book-now img{
-    width: 16px; ;
-    height: 15px; ;
+.book-now img {
+  width: 16px;
+  height: 15px;
+}
+.book-now:hover {
+  color: white;
+  background-color: #000;
+  border-color: #000;
+}
+.location-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 51px;
+}
+/* Grid tests */
+.grid-img1 {
+  grid-area: cottege;
+}
+.grid-img2 {
+  grid-area: italy;
+}
+.grid-img3 {
+  grid-area: bridge;
+}
+.grid-img4 {
+  grid-area: group;
+}
+.grid-img5 {
+  grid-area: twin;
+}
+.grid-img6 {
+  grid-row: bigben;
+}
+.gallery-container {
+  display: grid;
+  grid-template-areas:
+    "cottege italy italy bridge bridge"
+    "group italy italy twin bigben";
+  justify-content: center;
+  align-items: stretch;
+  row-gap: 26px;
+  column-gap: 30px;
+  margin-bottom: 84px;
 }
